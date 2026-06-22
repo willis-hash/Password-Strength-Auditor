@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+config.py
+assets/qr_codes/*.png
+auth/assets/qr_codes/*.png
+*.tar
+*.tar.gz
+test.txt
+test2.txt
