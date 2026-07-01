@@ -1,6 +1,6 @@
 # Password Strength Auditing System
 **Student:** Willis Nyaramba | **Reg No:** 192196
-**Course:** CNS 3104 | **Supervisor:** Mr. Tiberius Tabulu
+**Course:** CNS 3104 
 **Institution:** Strathmore University, School of Computing and Engineering Sciences
 
 ---
