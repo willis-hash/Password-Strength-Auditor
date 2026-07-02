@@ -30,11 +30,11 @@ def full_audit(password):
         "password_length": len(password),
         "rule_score": rule_result["score"],
         "rule_label": rule_result["label"],
+        "crack_time": jtr_result.get("crack_time"),
         "cracked_by_jtr": jtr_result["cracked"],
         "final_label": final_label,
         "recommendations": recommendations,
     }
-
 
 if __name__ == "__main__":
     test_passwords = ["123456", "Password1", "Tr0ub4dor&3", "X7$qP9!zR2#vL5mK"]

@@ -62,11 +62,17 @@ def crack_with_jtr(password, hash_type="md5", use_rules=False, timeout=30):
         match = re.search(r"(\d+) password hash(es)? cracked", show_result.stdout)
         cracked_count = int(match.group(1)) if match else 0
 
+        # Extract crack time from JtR output e.g. "0:00:00:01"
+        import re as _re
+        time_match = _re.search(r"(\d+:\d+:\d+:\d+)", result.stdout)
+        crack_time = time_match.group(1) if time_match else None
+
         return {
-            "cracked": cracked_count > 0,
-            "method": "rules" if use_rules else "dictionary",
-            "raw_output": result.stdout,
-            "show_output": show_result.stdout,
+        "cracked": cracked_count > 0,
+        "method": "rules" if use_rules else "dictionary",
+        "crack_time": crack_time,
+        "raw_output": result.stdout,
+        "show_output": show_result.stdout,
         }
 
     finally:
